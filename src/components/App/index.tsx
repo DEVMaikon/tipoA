@@ -11,9 +11,7 @@ export default function App() {
   return (
     <ThemeProvider theme={DefaultTheme}>
       <GlobalStyles />
-      <Container>
-        <Home />
-      </Container>
+      <Home />
     </ThemeProvider>
   );
 }

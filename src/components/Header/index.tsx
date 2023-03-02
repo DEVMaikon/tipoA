@@ -5,6 +5,7 @@ import {
   UserActions,
   CategoriesBar,
   ButtonUserActions,
+  Container,
 } from "./style";
 
 import ShieldCheck from "../../assets/images/icons/ShieldCheck.svg";
@@ -20,67 +21,69 @@ import CrownSimple from "../../assets/images/icons/CrownSimple.svg";
 export default function Header() {
   return (
     <header>
-      <AlertsBar>
-        <ul>
-          <li>
-            <div className="icon">
-              <img src={ShieldCheck} alt="Ícone de segurança" />
-            </div>
-            <div className="text">
-              Compra <span className="highlight">100% segura</span>
-            </div>
-          </li>
-          <li>
-            <div className="icon">
-              <img src={Truck} alt="Ícone de caminhão de entrega" />
-            </div>
-            <div className="text">
-              <span className="highlight">Frete grátis</span> acima de R$ 200
-            </div>
-          </li>
-          <li>
-            <div className="icon">
-              <img src={CreditCard} alt="Ícone de cartão de crédito" />
-            </div>
-            <div className="text">
-              <span className="highlight">Parcele</span> suas compras
-            </div>
-          </li>
-        </ul>
-      </AlertsBar>
+      <Container>
+        <AlertsBar>
+          <ul>
+            <li>
+              <div className="icon">
+                <img src={ShieldCheck} alt="Ícone de segurança" />
+              </div>
+              <div className="text">
+                Compra <span className="highlight">100% segura</span>
+              </div>
+            </li>
+            <li>
+              <div className="icon">
+                <img src={Truck} alt="Ícone de caminhão de entrega" />
+              </div>
+              <div className="text">
+                <span className="highlight">Frete grátis</span> acima de R$ 200
+              </div>
+            </li>
+            <li>
+              <div className="icon">
+                <img src={CreditCard} alt="Ícone de cartão de crédito" />
+              </div>
+              <div className="text">
+                <span className="highlight">Parcele</span> suas compras
+              </div>
+            </li>
+          </ul>
+        </AlertsBar>
 
-      <UserActions>
-        <div className="logo">
-          <img src={VtexLogo} alt="Logo Vtex" />
-        </div>
-        <div className="searchBar">
-          <input type="text" placeholder="O que você está buscando?" />
-        </div>
-        <div className="userArea">
-          <ButtonUserActions>
-            <img src={Return} alt="" />
-          </ButtonUserActions>
-          <ButtonUserActions>
-            <img src={Heart} alt="" />
-          </ButtonUserActions>
-          <ButtonUserActions>
-            <img src={UserCircle} alt="" />
-          </ButtonUserActions>
-          <ButtonUserActions>
-            <img src={ShoppingCart} alt="" />
-          </ButtonUserActions>
-        </div>
-      </UserActions>
+        <UserActions>
+          <div className="logo">
+            <img src={VtexLogo} alt="Logo Vtex" />
+          </div>
+          <div className="searchBar">
+            <input type="text" placeholder="O que você está buscando?" />
+          </div>
+          <div className="userArea">
+            <ButtonUserActions>
+              <img src={Return} alt="" />
+            </ButtonUserActions>
+            <ButtonUserActions>
+              <img src={Heart} alt="" />
+            </ButtonUserActions>
+            <ButtonUserActions>
+              <img src={UserCircle} alt="" />
+            </ButtonUserActions>
+            <ButtonUserActions>
+              <img src={ShoppingCart} alt="" />
+            </ButtonUserActions>
+          </div>
+        </UserActions>
 
-      <CategoriesBar>
-        <ButtonsCategoriesBar label="Todas Categorias" />
-        <ButtonsCategoriesBar label="Supermercado" />
-        <ButtonsCategoriesBar label="Livros" />
-        <ButtonsCategoriesBar label="Modas" />
-        <ButtonsCategoriesBar label="Lançamentos" />
-        <ButtonsCategoriesBar label="Ofertas do dia" />
-        <ButtonsCategoriesBar icon={CrownSimple} label="Assinatura" />
-      </CategoriesBar>
+        <CategoriesBar>
+          <ButtonsCategoriesBar label="Todas Categorias" />
+          <ButtonsCategoriesBar label="Supermercado" />
+          <ButtonsCategoriesBar label="Livros" />
+          <ButtonsCategoriesBar label="Modas" />
+          <ButtonsCategoriesBar label="Lançamentos" />
+          <ButtonsCategoriesBar label="Ofertas do dia" />
+          <ButtonsCategoriesBar icon={CrownSimple} label="Assinatura" />
+        </CategoriesBar>
+      </Container>
     </header>
   );
 }
