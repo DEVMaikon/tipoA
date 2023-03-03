@@ -2,39 +2,18 @@ import CardProdut from "../CardProduct";
 
 import ProductSmartphone from "../../assets/images/ProductSmartphone.webp";
 
-import {
-  Container,
-  Title,
-  ProductsCategoryBar,
-  CategoryButton,
-  CardArea,
-} from "./styles";
+import { Container, Title, CardArea } from "./styles";
 
-export default function ProductSection() {
+type ProductsSectionProps = {
+  children: JSX.Element;
+};
+
+export default function ProductSection({ children }: ProductsSectionProps) {
   return (
     <section>
       <Container>
         <Title>Produtos relacionados</Title>
-        <ProductsCategoryBar>
-          <CategoryButton>
-            <span className="highlight">Celular</span>
-          </CategoryButton>
-          <CategoryButton>
-            <span>Acessórios</span>
-          </CategoryButton>
-          <CategoryButton>
-            <span>Tablets</span>
-          </CategoryButton>
-          <CategoryButton>
-            <span>Notebooks</span>
-          </CategoryButton>
-          <CategoryButton>
-            <span>Tvs</span>
-          </CategoryButton>
-          <CategoryButton>
-            <span>Ver todos</span>
-          </CategoryButton>
-        </ProductsCategoryBar>
+        {children}
         <CardArea>
           <CardProdut
             image={ProductSmartphone}
