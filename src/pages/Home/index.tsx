@@ -1,5 +1,6 @@
 import Header from "../../components/Header";
 import BannerHome from "../../components/BannerHome";
+import CardFilterArea from "../../components/CardFilterArea";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         title="Venha conhecer nossas promoçõe"
         subtitle="50% Off nos produtos"
       />
+      <CardFilterArea />
     </>
   );
 }

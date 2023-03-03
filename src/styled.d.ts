@@ -8,6 +8,7 @@ declare module "styled-components" {
       primary: string;
       gray1: string;
       gray2: string;
+      gray3: string;
     };
   }
 }
