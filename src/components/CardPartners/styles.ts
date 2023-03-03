@@ -2,36 +2,28 @@ import styled from "styled-components";
 
 import bgCardPartner from "../../assets/images/bgCardPartner.webp";
 
-export const PartnersArea = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10rem;
-`;
-
 export const Card = styled.div`
+  position: relative;
   max-width: 58.9rem;
   width: 100%;
-  height: 28.4rem;
+  height: 35rem;
   background-image: url(${bgCardPartner});
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   border-radius: 0px 0px 10px 10px;
   overflow: hidden;
-  position: relative;
   .filter {
-    /* position: absolute;
+    position: absolute;
     z-index: 1;
-    width: 99%;
+    width: 97.5%;
     height: 100%;
+    border-radius: 0px 0px 10px 10px;
     top: 0;
-    left: 0;
+    left: 4px;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 85.04%);
-    mix-blend-mode: normal;
-    opacity: 0.8; */
+    opacity: 0.8;
   }
   .content {
-    padding-top: 4.8rem;
+    padding-top: 11.4rem;
     padding-left: 3.9rem;
     z-index: 2;
     position: relative;

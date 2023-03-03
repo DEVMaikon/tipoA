@@ -3,9 +3,10 @@ import BannerHome from "../../components/BannerHome";
 import CardFilterArea from "../../components/CardFilterArea";
 import ProductSection from "../../components/ProductsSection";
 import ProductsCategoryBar from "../../components/ProductsCategoryBar";
-import PartnersCard from "../../components/PartnersCard";
+import CardPartners from "../../components/CardPartners";
+import BrandsSection from "../../components/BrandsSection";
 
-import { PartnersArea } from "./styles";
+import { PartnersArea, ProductsSubtitle } from "./styles";
 
 export default function Home() {
   return (
@@ -15,14 +16,32 @@ export default function Home() {
         title="Venha conhecer nossas promoçõe"
         subtitle="50% Off nos produtos"
       />
+
       <CardFilterArea />
+
       <ProductSection>
         <ProductsCategoryBar />
       </ProductSection>
+
       <PartnersArea>
-        <PartnersCard />
-        <PartnersCard />
+        <CardPartners />
+        <CardPartners />
       </PartnersArea>
+
+      <ProductSection>
+        <ProductsSubtitle>Ver todos</ProductsSubtitle>
+      </ProductSection>
+
+      <PartnersArea>
+        <CardPartners />
+        <CardPartners />
+      </PartnersArea>
+
+      <BrandsSection />
+
+      <ProductSection>
+        <ProductsSubtitle>Ver todos</ProductsSubtitle>
+      </ProductSection>
     </>
   );
 }

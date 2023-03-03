@@ -2,7 +2,7 @@ import { Card } from "./styles";
 
 import Button from "../Button";
 
-export default function PartnersCard() {
+export default function CardPartners() {
   return (
     <Card>
       <div className="filter"></div>

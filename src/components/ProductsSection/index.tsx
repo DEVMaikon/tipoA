@@ -5,7 +5,7 @@ import ProductSmartphone from "../../assets/images/ProductSmartphone.webp";
 import { Container, Title, CardArea } from "./styles";
 
 type ProductsSectionProps = {
-  children: JSX.Element;
+  children?: JSX.Element;
 };
 
 export default function ProductSection({ children }: ProductsSectionProps) {

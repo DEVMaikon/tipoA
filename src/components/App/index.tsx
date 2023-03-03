@@ -1,9 +1,7 @@
 import { ThemeProvider } from "styled-components";
 
-import GlobalStyles from "../../assets/styles/global";
 import DefaultTheme from "../../assets/styles/themes/default";
-
-import { Container } from "./styles";
+import GlobalStyles from "../../assets/styles/global";
 
 import Home from "../../pages/Home";
 
