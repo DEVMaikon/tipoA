@@ -15,13 +15,15 @@ type BannerHomeProps = {
 
 export default function BannerHome({ title, subtitle }: BannerHomeProps) {
   return (
-    <BannerContainer>
-      <FilterBannerContainer />
-      <Container>
-        <Title>{title}</Title>
-        <Subtitle>{subtitle}</Subtitle>
-        <Button label="Ver produto" />
-      </Container>
-    </BannerContainer>
+    <section>
+      <BannerContainer>
+        <FilterBannerContainer />
+        <Container>
+          <Title>{title}</Title>
+          <Subtitle>{subtitle}</Subtitle>
+          <Button label="Ver produto" />
+        </Container>
+      </BannerContainer>
+    </section>
   );
 }

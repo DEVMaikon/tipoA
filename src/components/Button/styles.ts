@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ButtonDefault = styled.button`
-  max-width: 22.7rem;
+  max-width: 24.5rem;
   width: 100%;
   height: 6rem;
   border-radius: 0.5rem;

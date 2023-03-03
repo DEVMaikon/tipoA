@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import MagnifyingGlass from "../../assets/images/icons/MagnifyingGlass.svg";
+
 export const Container = styled.div`
   max-width: 131rem;
   width: 100%;
@@ -56,13 +58,15 @@ export const UserActions = styled.div`
   .searchBar {
     margin-right: 6.1rem;
     input {
+      padding: 1.4rem 1.4rem 1.4rem 2.4rem;
       width: 65.7rem;
       height: 4.8rem;
       background-color: ${({ theme }) => theme.colors.gray2};
-      background-image: url("../images/icons/MagnifyingGlass.svg");
+      background-image: url(${MagnifyingGlass});
+      background-repeat: no-repeat;
+      background-position: 98% 30%;
       border-radius: 1rem;
       &::placeholder {
-        padding: 1.4rem 1.4rem 1.4rem 2.4rem;
         font-weight: 500;
         font-size: 1.4rem;
         line-height: 2.1rem;
