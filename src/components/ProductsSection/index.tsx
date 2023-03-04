@@ -20,7 +20,7 @@ type ProductsSectionProps = {
 
 export default function ProductSection({ children }: ProductsSectionProps) {
   const [products, setProducts] = useState<productData[]>([]);
-  const [productModal, setProductModal] = useState<number | null>(null);
+  const [productModal, setProductModal] = useState<number>(0);
   const [showModal, setShowModal] = useState<boolean>(false);
 
   useEffect(() => {
@@ -98,7 +98,7 @@ export default function ProductSection({ children }: ProductsSectionProps) {
         </button>
       </Section>
 
-      {productModal && (
+      {productModal >= 0 && (
         <Modal
           showModal={showModal}
           setShowModal={setShowModal}
