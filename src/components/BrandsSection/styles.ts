@@ -56,6 +56,7 @@ export const CircleBrand = styled.div`
   width: 21.1rem;
   height: 21.1rem;
   border-radius: 50%;
+  margin: 2rem 0;
   background: #ffffff;
   box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.13);
   .image {

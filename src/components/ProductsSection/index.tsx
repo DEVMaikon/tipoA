@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
 
 import Button from "../Button";
 import Modal from "../Modal";
@@ -8,6 +10,7 @@ import { formatCurrency } from "../../utils/formatCurrency";
 import Arrow from "../../assets/images/icons/Arrow.svg";
 
 import { Section, Container, Title, CardArea, Card } from "./styles";
+import "swiper/css";
 
 import { productData } from "../../types/productData";
 
@@ -46,30 +49,45 @@ export default function ProductSection({ children }: ProductsSectionProps) {
           <Title>Produtos relacionados</Title>
           {children}
           <CardArea>
-            {products.map((product, index) => (
-              <Card key={index}>
-                <div className="image">
-                  <img
-                    src={product.photo}
-                    alt={product.descriptionShort}
-                    title={product.descriptionShort}
-                  />
-                </div>
-                <div className="content">
-                  <h2>{product.productName}</h2>
-                  <span className="oldPrice">
-                    {formatCurrency(Number(product.price) / 0.93)}
-                  </span>
-                  <strong>{formatCurrency(Number(product.price))}</strong>
-                  <small>
-                    ou 2x de {formatCurrency(Number(product.price) / 2)} sem
-                    juros
-                  </small>
-                  <span className="deliveryCondition">Frete grátis</span>
-                  <Button label="Comprar" onClick={() => handleClick(index)} />
-                </div>
-              </Card>
-            ))}
+            <Swiper
+              modules={[Navigation]}
+              spaceBetween={62}
+              slidesPerView={4}
+              navigation={{
+                prevEl: ".btn-left",
+                nextEl: ".btn-right",
+              }}
+            >
+              {products.map((product, index) => (
+                <SwiperSlide key={index}>
+                  <Card>
+                    <div className="image">
+                      <img
+                        src={product.photo}
+                        alt={product.descriptionShort}
+                        title={product.descriptionShort}
+                      />
+                    </div>
+                    <div className="content">
+                      <h2>{product.productName}</h2>
+                      <span className="oldPrice">
+                        {formatCurrency(Number(product.price) / 0.93)}
+                      </span>
+                      <strong>{formatCurrency(Number(product.price))}</strong>
+                      <small>
+                        ou 2x de {formatCurrency(Number(product.price) / 2)} sem
+                        juros
+                      </small>
+                      <span className="deliveryCondition">Frete grátis</span>
+                      <Button
+                        label="Comprar"
+                        onClick={() => handleClick(index)}
+                      />
+                    </div>
+                  </Card>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </CardArea>
         </Container>
         <button className="btn-left">

@@ -75,6 +75,8 @@ export const Card = styled.div`
   background: #ffffff;
   box-shadow: 0px 3px 19px rgba(0, 0, 0, 0.22);
   border-radius: 1rem;
+  //margin to protect from overflow hidden
+  margin: 2rem 0;
   .image {
     margin-bottom: 1.9rem;
   }
