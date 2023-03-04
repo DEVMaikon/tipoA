@@ -6,9 +6,15 @@ import ProductSmartphone from "../../assets/images/ProductSmartphone.webp";
 type ModalProps = {
   showModal: boolean;
   setShowModal: (state: boolean) => void;
+  productModal: [];
 };
 
-export default function Modal({ showModal, setShowModal }: ModalProps) {
+export default function Modal({
+  showModal,
+  setShowModal,
+  productModal,
+}: ModalProps) {
+  console.log(productModal);
   return ReactDOM.createPortal(
     showModal && (
       <Overlay>
@@ -19,15 +25,16 @@ export default function Modal({ showModal, setShowModal }: ModalProps) {
             </button>
           </div>
           <div className="image">
-            <img src={ProductSmartphone} alt="Smartphone" />
+            <img
+              src={productModal.photo}
+              alt={productModal.descriptionShort}
+              title={productModal.descriptionShort}
+            />
           </div>
           <div className="content">
-            <h3>LOREM IPSUM DOLOR SIT AMET</h3>
-            <strong>R$ 1.499,90</strong>
-            <p>
-              Many desktop publishing packages and web page editors now many
-              desktop publishing
-            </p>
+            <h3>{productModal.productName}</h3>
+            <strong>{`R$ ${productModal.price}`}</strong>
+            <p>{productModal.descriptionShort}</p>
             <a href="/">Veja mais detalhes do produto {`>`}</a>
           </div>
         </ModalContainer>

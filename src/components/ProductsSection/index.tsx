@@ -13,6 +13,7 @@ type ProductsSectionProps = {
 
 export default function ProductSection({ children }: ProductsSectionProps) {
   const [products, setProducts] = useState<[]>([]);
+  const [productModal, setProductModal] = useState<any>(null);
   const [showModal, setShowModal] = useState<boolean>(false);
 
   useEffect(() => {
@@ -29,18 +30,19 @@ export default function ProductSection({ children }: ProductsSectionProps) {
       });
   }, []);
 
-  function handleClick() {
+  function handleClick(index: number) {
+    setProductModal(index);
     setShowModal(true);
   }
-  console.log(products);
+
   return (
     <section>
       <Container>
         <Title>Produtos relacionados</Title>
         {children}
         <CardArea>
-          {products.map((product) => (
-            <Card>
+          {products.map((product, index) => (
+            <Card key={index}>
               <div className="image">
                 <img
                   src={product.photo}
@@ -54,13 +56,17 @@ export default function ProductSection({ children }: ProductsSectionProps) {
                 <strong>{`R$ ${product.price}`}</strong>
                 <small>ou 2x de R$ 49,95 sem juros</small>
                 <span className="deliveryCondition">Frete grátis</span>
-                <Button label="Comprar" onClick={handleClick} />
+                <Button label="Comprar" onClick={() => handleClick(index)} />
               </div>
             </Card>
           ))}
         </CardArea>
       </Container>
-      <Modal showModal={showModal} setShowModal={setShowModal} />
+      <Modal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        productModal={products[productModal]}
+      />
     </section>
   );
 }
