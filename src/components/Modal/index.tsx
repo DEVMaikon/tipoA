@@ -2,7 +2,6 @@ import ReactDOM from "react-dom";
 import { ModalContainer, Overlay } from "./styles";
 
 import ProductSmartphone from "../../assets/images/ProductSmartphone.webp";
-import { useEffect } from "react";
 
 type ModalProps = {
   showModal: boolean;

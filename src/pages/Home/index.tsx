@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Header from "../../components/Header";
 import BannerHome from "../../components/BannerHome";
@@ -8,13 +8,10 @@ import ProductsCategoryBar from "../../components/ProductsCategoryBar";
 import CardPartners from "../../components/CardPartners";
 import BrandsSection from "../../components/BrandsSection";
 import Footer from "../../components/Footer";
-import Modal from "../../components/Modal";
 
 import { PartnersArea, ProductsSubtitle } from "./styles";
 
 export default function Home() {
-  const [showModal, setShowModal] = useState<boolean>(false);
-
   return (
     <>
       <Header />
@@ -25,7 +22,7 @@ export default function Home() {
 
       <CardFilterArea />
 
-      <ProductSection setShowModal={setShowModal}>
+      <ProductSection>
         <ProductsCategoryBar />
       </ProductSection>
 
@@ -34,7 +31,7 @@ export default function Home() {
         <CardPartners />
       </PartnersArea>
 
-      <ProductSection setShowModal={setShowModal}>
+      <ProductSection>
         <ProductsSubtitle>Ver todos</ProductsSubtitle>
       </ProductSection>
 
@@ -45,13 +42,11 @@ export default function Home() {
 
       <BrandsSection />
 
-      <ProductSection setShowModal={setShowModal}>
+      <ProductSection>
         <ProductsSubtitle>Ver todos</ProductsSubtitle>
       </ProductSection>
 
       <Footer />
-
-      <Modal showModal={showModal} setShowModal={setShowModal} />
     </>
   );
 }

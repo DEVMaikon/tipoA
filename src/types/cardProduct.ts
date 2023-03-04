@@ -1,9 +1,9 @@
 export interface CardProductProps {
-  image: string;
-  title: string;
-  oldPrice?: string;
+  photo: string;
+  productName: string;
+  descriptionShort: string;
   price: string;
+  oldPrice?: string;
   condition?: string;
   delivery?: string;
-  setShowModal: (state: boolean) => void;
 }

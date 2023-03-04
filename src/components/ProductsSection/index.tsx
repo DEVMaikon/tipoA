@@ -1,62 +1,66 @@
-import CardProdut from "../CardProduct";
+import { useState, useEffect } from "react";
+
+import Button from "../Button";
+import Modal from "../Modal";
 
 import ProductSmartphone from "../../assets/images/ProductSmartphone.webp";
 
-import { Container, Title, CardArea } from "./styles";
+import { Container, Title, CardArea, Card } from "./styles";
 
 type ProductsSectionProps = {
   children?: JSX.Element;
-  setShowModal: (state: boolean) => void;
 };
 
-export default function ProductSection({
-  children,
-  setShowModal,
-}: ProductsSectionProps) {
+export default function ProductSection({ children }: ProductsSectionProps) {
+  const [products, setProducts] = useState<[]>([]);
+  const [showModal, setShowModal] = useState<boolean>(false);
+
+  useEffect(() => {
+    fetch(
+      "https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json"
+    )
+      .then(async (response) => {
+        const json = await response.json();
+        const array = [...products, ...json.products];
+        setProducts(array);
+      })
+      .catch((error) => {
+        console.error("error", error);
+      });
+  }, []);
+
+  function handleClick() {
+    setShowModal(true);
+  }
+  console.log(products);
   return (
     <section>
       <Container>
         <Title>Produtos relacionados</Title>
         {children}
         <CardArea>
-          <CardProdut
-            image={ProductSmartphone}
-            title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            oldPrice="R$ 30,90"
-            price="R$ 28,90"
-            condition="ou 2x de R$ 49,95 sem juros"
-            delivery="Frete grátis"
-            setShowModal={setShowModal}
-          />
-          <CardProdut
-            image={ProductSmartphone}
-            title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            oldPrice="R$ 30,90"
-            price="R$ 28,90"
-            condition="ou 2x de R$ 49,95 sem juros"
-            delivery="Frete grátis"
-            setShowModal={setShowModal}
-          />
-          <CardProdut
-            image={ProductSmartphone}
-            title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            oldPrice="R$ 30,90"
-            price="R$ 28,90"
-            condition="ou 2x de R$ 49,95 sem juros"
-            delivery="Frete grátis"
-            setShowModal={setShowModal}
-          />
-          <CardProdut
-            image={ProductSmartphone}
-            title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            oldPrice="R$ 30,90"
-            price="R$ 28,90"
-            condition="ou 2x de R$ 49,95 sem juros"
-            delivery="Frete grátis"
-            setShowModal={setShowModal}
-          />
+          {products.map((product) => (
+            <Card>
+              <div className="image">
+                <img
+                  src={product.photo}
+                  alt={product.descriptionShort}
+                  title={product.descriptionShort}
+                />
+              </div>
+              <div className="content">
+                <h2>{product.productName}</h2>
+                <span className="oldPrice">R$ 30,90</span>
+                <strong>{`R$ ${product.price}`}</strong>
+                <small>ou 2x de R$ 49,95 sem juros</small>
+                <span className="deliveryCondition">Frete grátis</span>
+                <Button label="Comprar" onClick={handleClick} />
+              </div>
+            </Card>
+          ))}
         </CardArea>
       </Container>
+      <Modal showModal={showModal} setShowModal={setShowModal} />
     </section>
   );
 }
