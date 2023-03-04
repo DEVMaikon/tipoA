@@ -6,7 +6,7 @@ export const Card = styled.div`
   position: relative;
   max-width: 58.9rem;
   width: 100%;
-  height: 35rem;
+  height: 36rem;
   background-image: url(${bgCardPartner});
   background-repeat: no-repeat;
   border-radius: 0px 0px 10px 10px;

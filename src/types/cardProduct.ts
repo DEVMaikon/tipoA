@@ -5,4 +5,5 @@ export interface CardProductProps {
   price: string;
   condition?: string;
   delivery?: string;
+  setShowModal: (state: boolean) => void;
 }

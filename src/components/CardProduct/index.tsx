@@ -11,7 +11,12 @@ export default function CardProdut({
   price,
   condition,
   delivery,
+  setShowModal,
 }: CardProductProps) {
+  function handleClick() {
+    setShowModal(true);
+  }
+
   return (
     <Card>
       <div className="image">
@@ -23,7 +28,7 @@ export default function CardProdut({
         <strong>{price}</strong>
         <small>{condition}</small>
         <span className="deliveryCondition">{delivery}</span>
-        <Button label="Comprar" />
+        <Button label="Comprar" onClick={handleClick} />
       </div>
     </Card>
   );

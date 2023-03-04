@@ -6,9 +6,13 @@ import { Container, Title, CardArea } from "./styles";
 
 type ProductsSectionProps = {
   children?: JSX.Element;
+  setShowModal: (state: boolean) => void;
 };
 
-export default function ProductSection({ children }: ProductsSectionProps) {
+export default function ProductSection({
+  children,
+  setShowModal,
+}: ProductsSectionProps) {
   return (
     <section>
       <Container>
@@ -22,6 +26,7 @@ export default function ProductSection({ children }: ProductsSectionProps) {
             price="R$ 28,90"
             condition="ou 2x de R$ 49,95 sem juros"
             delivery="Frete grátis"
+            setShowModal={setShowModal}
           />
           <CardProdut
             image={ProductSmartphone}
@@ -30,6 +35,7 @@ export default function ProductSection({ children }: ProductsSectionProps) {
             price="R$ 28,90"
             condition="ou 2x de R$ 49,95 sem juros"
             delivery="Frete grátis"
+            setShowModal={setShowModal}
           />
           <CardProdut
             image={ProductSmartphone}
@@ -38,6 +44,7 @@ export default function ProductSection({ children }: ProductsSectionProps) {
             price="R$ 28,90"
             condition="ou 2x de R$ 49,95 sem juros"
             delivery="Frete grátis"
+            setShowModal={setShowModal}
           />
           <CardProdut
             image={ProductSmartphone}
@@ -46,6 +53,7 @@ export default function ProductSection({ children }: ProductsSectionProps) {
             price="R$ 28,90"
             condition="ou 2x de R$ 49,95 sem juros"
             delivery="Frete grátis"
+            setShowModal={setShowModal}
           />
         </CardArea>
       </Container>
