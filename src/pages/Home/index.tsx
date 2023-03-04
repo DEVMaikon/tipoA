@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <Header />
       <BannerHome
-        title="Venha conhecer nossas promoçõe"
+        title="Venha conhecer nossas promoções"
         subtitle="50% Off nos produtos"
       />
 

@@ -1,5 +1,28 @@
 import styled from "styled-components";
 
+export const Section = styled.section`
+  max-width: 147rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  .btn-left {
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    background-color: transparent;
+  }
+  .btn-right {
+    position: absolute;
+    top: 50%;
+    right: 5rem;
+    background-color: transparent;
+    img {
+      transform: rotate(180deg);
+    }
+  }
+`;
+
 export const Container = styled.div`
   max-width: 131rem;
   width: 100%;
@@ -61,6 +84,7 @@ export const Card = styled.div`
       font-size: 1.5rem;
       line-height: 2.2rem;
       color: ${({ theme }) => theme.colors.gray5};
+      margin-bottom: 1.2rem;
     }
     .oldPrice {
       display: block;

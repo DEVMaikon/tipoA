@@ -14,7 +14,6 @@ export default function Modal({
   setShowModal,
   productModal,
 }: ModalProps) {
-  console.log(productModal);
   return ReactDOM.createPortal(
     showModal && (
       <Overlay>

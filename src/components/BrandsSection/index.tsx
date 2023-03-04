@@ -1,10 +1,11 @@
-import { CircleBrand, Container, GridArea, Title } from "./styles";
+import { Section, Container, CircleBrand, GridArea, Title } from "./styles";
 
 import LogoVtex from "../../assets/images/LogoVtex.svg";
+import ArrowBlue from "../../assets/images/icons/ArrowBlue.svg";
 
 export default function BrandsSection() {
   return (
-    <section>
+    <Section>
       <Container>
         <Title>Navegue por marcas</Title>
         <GridArea>
@@ -35,6 +36,11 @@ export default function BrandsSection() {
           </CircleBrand>
         </GridArea>
       </Container>
-    </section>
+      <div className="btn-right-circle">
+        <button>
+          <img src={ArrowBlue} alt="Seta para Direita" />
+        </button>
+      </div>
+    </Section>
   );
 }
