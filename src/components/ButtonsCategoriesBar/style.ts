@@ -15,6 +15,7 @@ export const ButtonCategory = styled.button<ButtonCategoryProps>`
   display: flex;
   align-items: center;
   gap: 1.2rem;
+  transition: color 0.3s;
   .image {
     width: 2rem;
     height: 2rem;
@@ -25,5 +26,8 @@ export const ButtonCategory = styled.button<ButtonCategoryProps>`
   }
   span {
     display: inline-block;
+  }
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;

@@ -18,8 +18,12 @@ export const CategoryButton = styled.button`
     font-size: 1.6rem;
     line-height: 1.6rem;
     color: ${({ theme }) => theme.colors.gray4};
+    transition: color 0.3s;
     &.highlight {
       font-weight: 700;
+      color: ${({ theme }) => theme.colors.primary};
+    }
+    &:hover {
       color: ${({ theme }) => theme.colors.primary};
     }
   }
