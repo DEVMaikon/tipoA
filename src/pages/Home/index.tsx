@@ -7,6 +7,7 @@ import CardPartners from "../../components/CardPartners";
 import BrandsSection from "../../components/BrandsSection";
 
 import { PartnersArea, ProductsSubtitle } from "./styles";
+import Footer from "../../components/Footer";
 
 export default function Home() {
   return (
@@ -42,6 +43,8 @@ export default function Home() {
       <ProductSection>
         <ProductsSubtitle>Ver todos</ProductsSubtitle>
       </ProductSection>
+
+      <Footer />
     </>
   );
 }
