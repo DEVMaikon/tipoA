@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, ReactNode } from "react";
 
 import Button from "../Button";
 import Modal from "../Modal";
@@ -7,13 +7,15 @@ import Arrow from "../../assets/images/icons/Arrow.svg";
 
 import { Section, Container, Title, CardArea, Card } from "./styles";
 
+import { productData } from "../../types/productData";
+
 type ProductsSectionProps = {
   children?: JSX.Element;
 };
 
 export default function ProductSection({ children }: ProductsSectionProps) {
-  const [products, setProducts] = useState<[]>([]);
-  const [productModal, setProductModal] = useState<any>(null);
+  const [products, setProducts] = useState<productData[]>([]);
+  const [productModal, setProductModal] = useState<number | null>(null);
   const [showModal, setShowModal] = useState<boolean>(false);
 
   useEffect(() => {
@@ -71,11 +73,13 @@ export default function ProductSection({ children }: ProductsSectionProps) {
         </button>
       </Section>
 
-      <Modal
-        showModal={showModal}
-        setShowModal={setShowModal}
-        productModal={products[productModal]}
-      />
+      {productModal && (
+        <Modal
+          showModal={showModal}
+          setShowModal={setShowModal}
+          productModal={products[productModal]}
+        />
+      )}
     </>
   );
 }

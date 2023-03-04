@@ -1,12 +1,12 @@
 import ReactDOM from "react-dom";
 import { ModalContainer, Overlay } from "./styles";
 
-import ProductSmartphone from "../../assets/images/ProductSmartphone.webp";
+import { productData } from "../../types/productData";
 
 type ModalProps = {
   showModal: boolean;
   setShowModal: (state: boolean) => void;
-  productModal: [];
+  productModal: productData;
 };
 
 export default function Modal({
