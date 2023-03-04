@@ -1,4 +1,7 @@
 import styled from "styled-components";
+
+import Button from "../Button";
+
 import bgSHero from "../../assets/images/bgSHero.webp";
 
 export const Container = styled.div`
@@ -48,4 +51,9 @@ export const Subtitle = styled.h2`
   line-height: 5.4rem;
   color: #ffffff;
   margin-bottom: 3.5rem;
+`;
+
+export const SmallButton = styled(Button)`
+  max-width: 22.7rem;
+  height: 6rem;
 `;

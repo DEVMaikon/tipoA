@@ -1,11 +1,10 @@
-import Button from "../Button";
-
 import {
   Container,
   BannerContainer,
   Title,
   Subtitle,
   FilterBannerContainer,
+  SmallButton,
 } from "./styles";
 
 type BannerHomeProps = {
@@ -21,7 +20,7 @@ export default function BannerHome({ title, subtitle }: BannerHomeProps) {
         <Container>
           <Title>{title}</Title>
           <Subtitle>{subtitle}</Subtitle>
-          <Button label="Ver produto" />
+          <SmallButton label="Ver produto" />
         </Container>
       </BannerContainer>
     </section>

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import Button from "../Button";
+
 import bgCardPartner from "../../assets/images/bgCardPartner.webp";
 
 export const Card = styled.div`
@@ -15,7 +17,7 @@ export const Card = styled.div`
     position: absolute;
     z-index: 1;
     width: 97.5%;
-    height: 100%;
+    height: 97.5%;
     border-radius: 0px 0px 10px 10px;
     top: 0;
     left: 4px;
@@ -44,4 +46,9 @@ export const Card = styled.div`
       margin-bottom: 3.2rem;
     }
   }
+`;
+
+export const SmallButton = styled(Button)`
+  max-width: 13.1rem;
+  height: 4.8rem;
 `;
