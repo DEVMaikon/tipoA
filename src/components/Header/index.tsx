@@ -80,7 +80,7 @@ export default function Header() {
           <ButtonsCategoriesBar label="Livros" />
           <ButtonsCategoriesBar label="Modas" />
           <ButtonsCategoriesBar label="Lançamentos" />
-          <ButtonsCategoriesBar label="Ofertas do dia" />
+          <ButtonsCategoriesBar label="Ofertas do dia" active />
           <ButtonsCategoriesBar icon={CrownSimple} label="Assinatura" />
         </CategoriesBar>
       </Container>

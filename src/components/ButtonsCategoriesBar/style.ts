@@ -1,12 +1,16 @@
 import styled from "styled-components";
 
-export const ButtonCategory = styled.button`
+interface ButtonCategoryProps {
+  active?: boolean;
+}
+
+export const ButtonCategory = styled.button<ButtonCategoryProps>`
   font-weight: 600;
   font-size: 1.2rem;
   line-height: 1.8rem;
   text-align: center;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.gray1};
+  ${(props) => (props.active ? `color:#F71963;` : `color:#9F9F9F;`)}
   background-color: transparent;
   display: flex;
   align-items: center;
