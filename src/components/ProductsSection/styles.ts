@@ -6,6 +6,7 @@ export const Container = styled.div`
   padding: 0 1.5rem;
   padding-top: 4rem;
   margin: 0 auto;
+  overflow-x: hidden;
 `;
 
 export const Title = styled.h1`
@@ -38,15 +39,15 @@ export const Title = styled.h1`
 export const CardArea = styled.div`
   max-width: 126.6rem;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   gap: 6.2rem;
   margin-bottom: 7rem;
 `;
 
 export const Card = styled.div`
-  max-width: 27rem;
-  width: 100%;
+  flex-basis: 27rem;
+  flex-grow: 0;
+  flex-shrink: 0;
   padding: 2.2rem 1.2rem 1.6rem 1.2rem;
   background: #ffffff;
   box-shadow: 0px 3px 19px rgba(0, 0, 0, 0.22);
