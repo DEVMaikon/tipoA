@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 import Header from "../../components/Header";
 import BannerHome from "../../components/BannerHome";
 import CardFilterArea from "../../components/CardFilterArea";

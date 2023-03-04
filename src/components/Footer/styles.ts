@@ -52,6 +52,9 @@ export const AreaLinks = styled.div`
           &:not(:last-child) {
             margin-bottom: 2.2rem;
           }
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
     }
@@ -72,6 +75,9 @@ export const AreaLinks = styled.div`
         color: #ffffff;
         &:not(:last-child) {
           margin-bottom: 2.2rem;
+        }
+        &:hover {
+          text-decoration: underline;
         }
       }
     }

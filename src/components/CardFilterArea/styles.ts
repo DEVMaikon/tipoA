@@ -36,4 +36,9 @@ export const Card = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s;
+  &:hover {
+    filter: brightness(1.5);
+    background-color: #f7f5f2;
+  }
 `;

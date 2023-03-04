@@ -1,4 +1,5 @@
 import ReactDOM from "react-dom";
+
 import { ModalContainer, Overlay } from "./styles";
 
 import { productData } from "../../types/productData";

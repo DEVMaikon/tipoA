@@ -154,8 +154,12 @@ export default function Footer() {
             </small>
           </div>
           <div className="brands">
-            <img src={EconverseLogo} alt="Logo Econverse" />
-            <img src={VtexLogo} alt="Logo Vtex" />
+            <a href="/">
+              <img src={EconverseLogo} alt="Logo Econverse" />
+            </a>
+            <a href="/">
+              <img src={VtexLogo} alt="Logo Vtex" />
+            </a>
           </div>
         </div>
       </AreaCopy>

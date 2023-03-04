@@ -18,36 +18,42 @@ export default function CardFilterArea() {
           </Card>
           <span className="highlight">Tecnologia</span>
         </CardContainer>
+
         <CardContainer>
           <Card>
             <img src={MarketIcon} alt="Ícone Supermercado" />
           </Card>
           <span>Supermercado</span>
         </CardContainer>
+
         <CardContainer>
           <Card>
             <img src={DrinkIcon} alt="Ícone Bebidas" />
           </Card>
           <span>Bebidas</span>
         </CardContainer>
+
         <CardContainer>
           <Card>
             <img src={ToolsIcon} alt="Ícone Ferramentas" />
           </Card>
           <span>Ferramentas</span>
         </CardContainer>
+
         <CardContainer>
           <Card>
             <img src={HealthIcon} alt="Ícone Saúde" />
           </Card>
           <span>Saúde</span>
         </CardContainer>
+
         <CardContainer>
           <Card>
             <img src={FitnessIcon} alt="Ícone Fitness" />
           </Card>
           <span>Fitness</span>
         </CardContainer>
+
         <CardContainer>
           <Card>
             <img src={DressIcon} alt="Ícone Moda" />
