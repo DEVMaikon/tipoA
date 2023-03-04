@@ -84,7 +84,94 @@
       font-style: normal;
       font-display: swap;
     }
+
+    @font-face {
+      font-family: 'Lato';
+      src: local('Lato Black'), local('Lato-Black'),
+        url('./src/assets/fonts/Lato-Black.woff2') format('woff2'),
+        url('./src/assets/fonts/Lato-Black.woff') format('woff');
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Lato';
+      src: local('Lato Bold'), local('Lato-Bold'),
+        url('./src/assets/fonts/Lato-Bold.woff2') format('woff2'),
+        url('./src/assets/fonts/Lato-Bold.woff') format('woff');
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Lato';
+      src: local('Lato Regular'), local('Lato-Regular'),
+        url('./src/assets/fonts/Lato-Regular.woff2') format('woff2'),
+        url('./src/assets/fonts/Lato-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
   </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": ["http://schema.org", { "@language": "pt-br" }],
+      "@type": "LocalBusiness",
+      "name": "Econverse",
+      "description": "Econverse",
+      "telephone": "(11) 94189-0231",
+      "image": "/",
+      "priceRange": "$$",
+      "openingHours": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes": "19:00:00",
+          "dayOfWeek": "https://schema.org/Monday",
+          "opens": "08:00:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes": "19:00:00",
+          "dayOfWeek": "https://schema.org/Tuesday",
+          "opens": "08:00:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes": "19:00:00",
+          "dayOfWeek": "https://schema.org/Wednesday",
+          "opens": "08:00:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes": "19:00:00",
+          "dayOfWeek": "https://schema.org/Thursday",
+          "opens": "08:00:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "closes": "19:00:00",
+          "dayOfWeek": "https://schema.org/Friday",
+          "opens": "08:00:00"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua do Rocio, 199",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "postalCode": "04552-000"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-23.593852",
+        "longitude": "-46.68505"
+      }
+    }
+    
+  </script>
 </head>
 
 <body>

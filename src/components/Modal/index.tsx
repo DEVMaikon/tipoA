@@ -1,5 +1,7 @@
 import ReactDOM from "react-dom";
 
+import { formatCurrency } from "../../utils/formatCurrency";
+
 import { ModalContainer, Overlay } from "./styles";
 
 import { productData } from "../../types/productData";
@@ -33,7 +35,7 @@ export default function Modal({
           </div>
           <div className="content">
             <h3>{productModal.productName}</h3>
-            <strong>{`R$ ${productModal.price}`}</strong>
+            <strong>{formatCurrency(Number(productModal.price))}</strong>
             <p>{productModal.descriptionShort}</p>
             <a href="/">Veja mais detalhes do produto {`>`}</a>
           </div>

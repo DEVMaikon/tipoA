@@ -59,17 +59,17 @@ export default function Header() {
             <input type="text" placeholder="O que você está buscando?" />
           </div>
           <div className="userArea">
-            <ButtonUserActions>
-              <img src={Return} alt="" />
+            <ButtonUserActions aria-label="Notificações">
+              <img src={Return} alt="Notificações" />
             </ButtonUserActions>
-            <ButtonUserActions>
-              <img src={Heart} alt="" />
+            <ButtonUserActions aria-label="Favoritos">
+              <img src={Heart} alt="Favoritos" />
             </ButtonUserActions>
-            <ButtonUserActions>
-              <img src={UserCircle} alt="" />
+            <ButtonUserActions aria-label="Conta">
+              <img src={UserCircle} alt="Conta" />
             </ButtonUserActions>
-            <ButtonUserActions>
-              <img src={ShoppingCart} alt="" />
+            <ButtonUserActions aria-label="Carrinho">
+              <img src={ShoppingCart} alt="Carrinho" />
             </ButtonUserActions>
           </div>
         </UserActions>

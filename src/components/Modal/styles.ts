@@ -57,7 +57,7 @@ export const ModalContainer = styled.div`
     }
     strong {
       display: block;
-      font-weight: 700;
+      font-weight: 900;
     }
     p {
       max-width: 29rem;

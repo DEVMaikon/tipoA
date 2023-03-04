@@ -1,0 +1,53 @@
+{
+  "@context": ["http://schema.org", { "@language": "pt-br" }],
+  "@type": "LocalBusiness",
+  "name": "Econverse",
+  "description": "Econverse",
+  "telephone": "011941890231",
+  "image": "/",
+  "priceRange": "$$",
+  "openingHours": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "closes": "19:00:00",
+      "dayOfWeek": "https://schema.org/Monday",
+      "opens": "08:00:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "closes": "19:00:00",
+      "dayOfWeek": "https://schema.org/Tuesday",
+      "opens": "08:00:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "closes": "19:00:00",
+      "dayOfWeek": "https://schema.org/Wednesday",
+      "opens": "08:00:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "closes": "19:00:00",
+      "dayOfWeek": "https://schema.org/Thursday",
+      "opens": "08:00:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "closes": "19:00:00",
+      "dayOfWeek": "https://schema.org/Friday",
+      "opens": "08:00:00"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua do Rocio, 199",
+    "addressLocality": "São Paulo",
+    "addressRegion": "SP",
+    "postalCode": "04552-000"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "-23.593852",
+    "longitude": "-46.68505"
+  }
+}

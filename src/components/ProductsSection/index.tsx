@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Button from "../Button";
 import Modal from "../Modal";
 
+import { formatCurrency } from "../../utils/formatCurrency";
+
 import Arrow from "../../assets/images/icons/Arrow.svg";
 
 import { Section, Container, Title, CardArea, Card } from "./styles";
@@ -55,9 +57,14 @@ export default function ProductSection({ children }: ProductsSectionProps) {
                 </div>
                 <div className="content">
                   <h2>{product.productName}</h2>
-                  <span className="oldPrice">R$ 30,90</span>
-                  <strong>{`R$ ${product.price}`}</strong>
-                  <small>ou 2x de R$ 49,95 sem juros</small>
+                  <span className="oldPrice">
+                    {formatCurrency(Number(product.price) / 0.93)}
+                  </span>
+                  <strong>{formatCurrency(Number(product.price))}</strong>
+                  <small>
+                    ou 2x de {formatCurrency(Number(product.price) / 2)} sem
+                    juros
+                  </small>
                   <span className="deliveryCondition">Frete grátis</span>
                   <Button label="Comprar" onClick={() => handleClick(index)} />
                 </div>
